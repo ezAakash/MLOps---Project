@@ -175,3 +175,11 @@ cython_debug/
 
 
 project_flow.txt
+
+artifacts/
+notebook/mongoDB.ipynb
+
+
+
+
+
