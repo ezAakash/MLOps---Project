@@ -31,12 +31,13 @@ class DataIngestion:
         """
         try:
             logging.info(f"Exporting data from mongodb")
-            my_data = Proj1Data()
+            my_data = Proj1Data() #yaha connection build hoh gya ... aur object bnn gya ...next calling the collToDF function 
             dataframe = my_data.export_collection_as_dataframe(collection_name=
-                                                                   self.data_ingestion_config.collection_name)
+                                                                   self.data_ingestion_config.collection_name)#specified dB or defalut se connect krdiya 
             logging.info(f"Shape of dataframe: {dataframe.shape}")
             feature_store_file_path  = self.data_ingestion_config.feature_store_file_path
-            dir_path = os.path.dirname(feature_store_file_path)
+            dir_path = os.path.dirname(feature_store_file_path) #returns the directory path of the file .
+            print(f"dir_path ye hai dekhlo : {dir_path}")
             os.makedirs(dir_path,exist_ok=True)
             logging.info(f"Saving exported data into feature store file path: {feature_store_file_path}")
             dataframe.to_csv(feature_store_file_path,index=False,header=True)

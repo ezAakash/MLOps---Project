@@ -176,7 +176,7 @@ cython_debug/
 
 project_flow.txt
 
-artifacts/
+artifact/
 notebook/mongoDB.ipynb
 
 
