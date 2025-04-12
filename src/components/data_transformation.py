@@ -65,7 +65,7 @@ class DataTransformation:
             final_pipeline = Pipeline(steps=[("Preprocessor", preprocessor)])
             logging.info("Final Pipeline Ready!!")
             logging.info("Exited get_data_transformer_object method of DataTransformation class")
-            return final_pipeline
+            return final_pipeline #just returning the pipeline object not executing it.
 
         except Exception as e:
             logging.exception("Exception occurred in get_data_transformer_object method of DataTransformation class")
